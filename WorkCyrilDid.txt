@@ -1,0 +1,48 @@
+# Laboratory section
+
+# Display Laboratory List
+def displayLabsList():
+    LabFile = open('laboratories.txt', "r")
+    for lines in LabFile:
+        lines = lines.replace('_', ' ')
+        print(lines)
+    LabFile.close()
+
+# Write Lab List to File
+def writeLabListToFile(lab):
+    lines = lab.formatLabInfo()
+    with open('laboratories.txt', 'a') as f:
+        f.writelines(lines)
+
+# Add Lab To list
+def addlaboratoryToList():
+    lab = str(input("Enter Lab Name: "))
+    labcost = str(input("Enter Lab Cost: "))
+
+    x = l.Laboratory(lab, labcost)
+
+    writeLabListToFile(x)
+
+
+
+
+
+def displayFacilitesList():
+    file = open("facilities.txt")
+    for lines in file:
+        lines = lines.replace("_", " ")
+        print(lines)
+    file.close()
+
+def addfacilityToList():
+    name = str(input("Enter Facility Name:"))
+    fac = fa.Facility(name)
+    writeFacilityListToFile(fac)
+
+def writeFacilityListToFile(fuc):
+    with open('facilities.txt', 'a') as f:
+        f.writelines(fuc.formatFacilityInfo())
+
+
+
+#Moral Support while debugging

@@ -1,0 +1,81 @@
+# Doctor Class
+
+class Doctor:
+
+    def __init__(self, id, name, specialty, schedule, qualification, roomNum):
+        self.id = id
+        self.name = name
+        self.specialty = specialty
+        self.schedule = schedule
+        self.qualification = qualification
+        self.roomNum = roomNum
+
+    def __str__(self):
+        return (f"ID: {self.id}\n"
+                f"Name: {self.name}\n"
+                f"Specialty: {self.specialty}\n"
+                f"Schedule: {self.schedule}\n"
+                f"Qualification: {self.qualification}"
+                f"Room Number: {self.roomNum}")
+
+    def formatDoctorInfo(self):
+        return f"{self.id}_{self.name}_{self.specialty}_{self.schedule}_{self.qualification}_{self.roomNum}"
+
+
+# Laboratory class
+
+class Laboratory:
+
+    def __init__(self, labName, cost):
+        self.labName = labName
+        self.cost = cost
+
+    def __str__(self):
+        return (f"Lab Name: {self.labName}"
+                f"Cost: {self.cost}")
+
+    def formatLabInfo(self):
+        return f"{self.labName}_{self.cost}"
+        
+
+# Facility class
+
+class Facility:
+
+    def __init__(self, facilName):
+        self.facilName = facilName
+
+    def __str__(self):
+        return f"Facility Name: {self.facilName}"
+
+    def formatFacilityInfo(self):
+        return f"{self.facilName}"
+
+
+
+# Patient Class
+
+class Patient:
+
+    def __init__(self, id, name, age, gender, diagnosis):
+        self.id = id
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.diagnosis = diagnosis
+
+    def __str__(self):
+        return (f"ID: {self.id}\n"
+                f"Name: {self.name}\n"
+                f"Age: {self.age}\n"
+                f"Gender: {self.gender}\n"
+                f"Diagnosis: {self.diagnosis}")
+
+    def formatPatientInfo(self):
+        return f"{self.id}_{self.name}_{self.age}_{self.gender}_{self.diagnosis}"
+
+
+
+
+##Putting Everyone's File/code
+##Debugging
